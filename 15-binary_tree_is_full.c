@@ -13,6 +13,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
+	if (tree->left == NULL && tree->right == NULL)
+		return (1);
 
 	left_balance = binary_tree_height(tree->left);
 	right_balance = binary_tree_height(tree->right);
